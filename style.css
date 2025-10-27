@@ -1,114 +1,138 @@
-body{
+* {
+    box-sizing: border-box;
+}
 
+.header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-
+    height: 200px;
+    width:100%;
+    min-width: 850px;
+    background-color: red;
 }
 
-.box{
-
-    background-color: chocolate ;
-    border-radius: 75px;
-    width: 100%;
-
+.header-box{
+    width: 50%;
+    height: 100px;
+    align-self: center; 
+    text-align: center;
+    background-color: antiquewhite;
 }
 
-.box_titulo{
+.header-title{
+    margin-top: 40px;
+}
 
-    margin-top: 5%;
+.body{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    font-size: 150px;
-    background-color: rgb(255, 153, 0);
-    border-radius: 75px;
-    margin-left: 315px;
-    margin-right: 315px;
-
+    justify-content: center;
+    width: 100%;
+    height: 900px;
+    margin-top: 10px;
+    min-width: 850px;
+    background-color: rgb(0, 255, 110);
 }
 
-.box_imagenes{
+.body-title{
+    text-align: center;
+}
 
+.body-text{
+    padding: 15px;
+    font-size: 25px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.body-content{
     display: grid;
-    background-color: rgb(255, 153, 0);
-    padding: 100px;
-    border-radius: 75px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin: 5%;
-    grid-gap: 1%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1.5fr;
     grid-template-areas: 
-    
-    'a b b'
-    'a c d'
-
+        "a a b b"
+        "a a b b"
+        "a a c d "
+    ;
+    width: 75%;
+    height: 900px;
+}
+@media screen and (max-width: 850px){
+    .body-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1.5fr;
+    grid-template-areas: 
+        "a a b b"
+        "a a b b"
+        "a a c d "
+    ;
+    width: 75%;
+    height: 900px;
+    margin-right: 100px;
+}
 }
 
-.box_imagen{
-
-    width: 100%;
-    height: 100%;
-    border-radius: 75px;
-
+.body-content > div{
+    margin: 5px;
 }
 
-.box_imagen{
 
-    object-fit: cover;
-}
-
-.box_imagen--1{
-
+.body-a{
     grid-area: a;
-
+    background-color: aqua;
+    min-width: 250px;
 }
 
-.box_imagen--2{
-
+.body-b{
     grid-area: b;
-
+    background-color: rgb(6, 176, 6);
+    min-width: 450px;
 }
 
-.box_imagen--3{
-
+.body-c{
     grid-area: c;
-
+    background-color: yellow;
 }
 
-.box_imagen--4{
-
+.body-d{
     grid-area: d;
-
+    background-color: yellow;
 }
 
-.box_tarjeta{
-
+.footer{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-    background-color: rgb(255, 153, 0);
-    border-radius: 75px;
-    padding: 150px;
-
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    min-width: 850px;
+    margin-bottom: -150px;
 }
 
-.box_perfil{
-
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 8%;
-
+.footer-box{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    background-color: rgb(14, 195, 246);
+    width: 100%;
+    height: 200px;
 }
 
-.box_descripcion{
+.footer-text{
+    font-size: 20px;
+    margin-right: 50px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    align-self: center;
+}
 
-    font-size: 30px;
+.footer-img{
+    margin-left: 50px;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
 
+.footer-content{
+    align-self: center;
 }
